@@ -1,0 +1,9 @@
+body {
+    background: black;
+    color: white;
+}
+
+.centeredPage {
+    display: flex;
+    justify-content: center;
+}

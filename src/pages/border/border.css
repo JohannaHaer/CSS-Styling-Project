@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../assets/fonts/Roboto-Medium.ttf');
+}
+
+.borderSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 10rem;
+    min-height: 100dvh;
+    font-family: 'Roboto';
+    margin: 10rem 0;
+}
+
+.rainbowExample, .serpentExample, .threeDBackExample {
+    width: 20rem;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    line-height: 1.5rem;
+    position: relative;
+    border-radius: 10px;
+    position: relative;
+    background-color: black;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* Similar Borderstyling for first and second Example */
+
+.rainbowExample::after, .rainbowExample::before, .serpentExample::after, .serpentExample::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 6px;
+    filter: blur(2px);
+}
+
+/* Border for rainbow Example (first Example)*/
+
+.rainbowExample::after, .rainbowExample::before {
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+}
+
+/* Border for second Example */
+
+.serpentExample::after, .serpentExample::before {
+    background-image: conic-gradient(from var(--angle), transparent 70%, #ff4545);
+}
+
+.rainbowExample::after, .rainbowExample::before {
+    animation: spin 3s infinite linear;
+}
+
+.serpentExample:hover::after, .serpentExample:hover::before {
+    animation: spin 5s infinite linear;
+}
+
+.rainbowExample::before, .serpentExample::before {
+    filter: blur(1.5rem);
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.threeDBackExample {
+    background-color: white;
+}
+
+.innerPartOfThreeDFront, .innerPartOfThreeDBack {
+    width: 90%;
+    background-color: white;
+}
+
+.innerPartOfThreeDFront {
+    all: unset;
+    color: black;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.innerPartOfThreeDFront:active {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.innerPartOfThreeDBack {
+    all: unset;
+    color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: rgb(121, 132, 146) 3px 3px 6px 1px inset, rgba(194, 188, 188, 0.5) -3px -3px 8px 1px inset;
+}
