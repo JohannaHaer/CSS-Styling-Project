@@ -33,7 +33,7 @@ const Border = () => {
                 <div className='confetti'></div>
                 <div className='confetti'></div>
                 <div className='confetti'></div>
-                <div className='innerPartOfGlassmorphism'>
+                <div className='innerPartOfGlassmorphismConfetti'>
                     <TextCard title={'Glassmorphism'}/>
                 </div>
             </div>
@@ -43,11 +43,7 @@ const Border = () => {
                 <div className='heart'></div>
                 <div className='heart'></div>
                 <div className='heart'></div>
-                <div className='heart'></div>
-                <div className='heart'></div>
-                <div className='heart'></div>
-                <div className='heart'></div>
-                <div className='innerPartOfGlassmorphism'>
+                <div className='innerPartOfGlassmorphismHeart'>
                     <TextCard title={'Glassmorphism'}/>
                 </div>
             </div>
