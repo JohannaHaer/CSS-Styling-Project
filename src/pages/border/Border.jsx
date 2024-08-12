@@ -13,14 +13,42 @@ const Border = () => {
             <div className='serpentExample'>
                 <TextCard title={'Hover me'}/>
             </div>
-            <div className='threeDBackExample'>
+            <div className='threeDExample'>
                 <button className='innerPartOfThreeDFront'>
                     <TextCard title={'Click me'}/>
                 </button>
             </div>
-            <div className='threeDBackExample'>
+            <div className='threeDExample'>
                 <div className='innerPartOfThreeDBack'>
                     <TextCard title={'Behind the Page'}/>
+                </div>
+            </div>
+            <div className='glassmorphismExample'>
+                <div className='confetti'></div>
+                <div className='confetti'></div>
+                <div className='confetti'></div>
+                <div className='confetti'></div>
+                <div className='confetti'></div>
+                <div className='confetti'></div>
+                <div className='confetti'></div>
+                <div className='confetti'></div>
+                <div className='confetti'></div>
+                <div className='innerPartOfGlassmorphism'>
+                    <TextCard title={'Glassmorphism'}/>
+                </div>
+            </div>
+            <div className='glassmorphismHeartExample'>
+                <div className='heart'></div>
+                <div className='heart'></div>
+                <div className='heart'></div>
+                <div className='heart'></div>
+                <div className='heart'></div>
+                <div className='heart'></div>
+                <div className='heart'></div>
+                <div className='heart'></div>
+                <div className='heart'></div>
+                <div className='innerPartOfGlassmorphism'>
+                    <TextCard title={'Glassmorphism'}/>
                 </div>
             </div>
         </section>

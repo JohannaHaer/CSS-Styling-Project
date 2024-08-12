@@ -13,7 +13,7 @@
     margin: 10rem 0;
 }
 
-.rainbowExample, .serpentExample, .threeDBackExample {
+.rainbowExample, .serpentExample, .threeDExample, .glassmorphismExample, .glassmorphismHeartExample {
     width: 20rem;
     height: fit-content;
     display: flex;
@@ -24,7 +24,23 @@
     position: relative;
     border-radius: 10px;
     position: relative;
+}
+
+.rainbowExample, .serpentExample, .threeDExample, .glassmorphismHeartExample {
     background-color: black;
+}
+
+.threeDExample {
+    background-color: white;
+}
+
+.glassmorphismExample {
+    background:
+        linear-gradient(red, transparent),
+        linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+    position: relative;
 }
 
 @property --angle {
@@ -82,15 +98,6 @@
     }
 }
 
-.threeDBackExample {
-    background-color: white;
-}
-
-.innerPartOfThreeDFront, .innerPartOfThreeDBack {
-    width: 90%;
-    background-color: white;
-}
-
 .innerPartOfThreeDFront {
     all: unset;
     color: black;
@@ -110,4 +117,81 @@
     padding: 1rem;
     border-radius: 10px;
     box-shadow: rgb(121, 132, 146) 3px 3px 6px 1px inset, rgba(194, 188, 188, 0.5) -3px -3px 8px 1px inset;
+}
+
+.innerPartOfGlassmorphism {
+  background-color: rgba(234, 239, 242, 0.121);
+  color: rgb(30, 29, 29);
+  padding: 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.confetti {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.confetti:first-child {
+    top: 10%;
+    left: 7%;
+    background-color: rgb(19, 113, 19);
+}
+
+.confetti:nth-child(2) {
+    top: 70%;
+    left: 16%;
+    background-color: rgb(223, 4, 4);
+}
+
+.confetti:nth-child(3) {
+    top: 55%;
+    left: 42%;
+    background-color: rgb(8, 4, 223);
+}
+
+.confetti:nth-child(4) {
+    top: 26%;
+    left: 70%;
+    background-color: rgb(226, 211, 7);
+}
+.confetti:nth-child(5) {
+    top: 34%;
+    left: 30%;
+    background-color: rgb(223, 4, 4);
+}
+.confetti:nth-child(6) {
+    top: 70%;
+    left: 88%;
+    background-color: rgb(19, 113, 19);
+}
+.confetti:nth-child(7) {
+    top: 89%;
+    left: 47%;
+    background-color: rgb(226, 211, 7);
+}
+.confetti:nth-child(8) {
+    top: 6%;
+    left: 67%;
+    background-color: rgb(8, 4, 223);
+}
+.confetti:nth-child(9) {
+    top: 50%;
+    left: 70%;
+    background-color: rgb(223, 4, 4);
+}
+
+.heart {
+    position: absolute;
+    width: 100px;
+    border-radius: 25px;
+    --c: red;
+    aspect-ratio: 1;
+    background:
+     radial-gradient(at 70% 31%,var(--c) 29%,#0000 30%),
+     radial-gradient(at 30% 31%,var(--c) 29%,#0000 30%),
+     linear-gradient(var(--c) 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-43% 0,50% 91%, 143% 0);
 }
